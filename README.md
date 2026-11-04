@@ -11,6 +11,7 @@ The agent sees live instances (ports 13337+) on every call.
 mcp-ida.js        opencode plugin (file://) — dynamically registers
                   live instances as remote MCP servers at startup
 tool/ida_mcp.js   tool file — 5 native tools (main one)
+ideamcp.ps1       optional mcp-tool throught powershell compatibility
 readme-rus        this file (Russian original)
 package.json      dependencies
 ```
@@ -43,6 +44,7 @@ All `<opencode>` paths = `C:\Users\<user>\.config\opencode\`
 
 ```
 mcp-ida.js  →  <opencode>\plugins\mcp-ida.js
+ideamcp.ps1 →  <opencode>\plugins\ideamcp.ps1
 ```
 
 ### Step 2. Create the tool directory and copy the tool file
@@ -65,7 +67,7 @@ tool\ida_mcp.js  →  <opencode>\tool\ida_mcp.js
 package.json  →  <opencode>\package.json
 ```
 
-### Step 4. Path to ida.exe inside tool\ida_mcp.js
+### Step 4. Path to ida.exe inside tool\ida_mcp.js && ideamcp.ps1
 
 Change the `IDA_EXE` line to your path, **or** set the `IDA_EXE`
 environment variable:
@@ -73,6 +75,11 @@ environment variable:
 ```js
 const IDA_EXE = process.env.IDA_EXE || 'X:\\<full path>\\ida.exe'
 ```
+ps1:
+```ps1
+$script:idaMcp:IdaExe = 'X:\\<full path>\\ida.exe'
+```
+
 
 ## 3. Arbitrary ports without restart
 
