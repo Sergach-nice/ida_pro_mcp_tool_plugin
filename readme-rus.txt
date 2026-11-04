@@ -10,6 +10,7 @@ xrefs, py_eval, ...), закрывать инстансы — БЕЗ перез�
     mcp-ida.js        плагин opencode (file://) — динамически регистрирует
                       live-инстансы как remote MCP-серверы при старте
     tool/ida_mcp.js   tool-файл — 5 нативных тулов (главное)
+    ideamcp.ps1       дает opencode возможность вызывать mcp-tool через powershell ( опционально ) 
     readme-rus        этот файл
 	package.json      зависимости
 	
@@ -38,7 +39,7 @@ xrefs, py_eval, ...), закрывать инстансы — БЕЗ перез�
 
 Шаг 1. Скопировать плагин:
     mcp-ida.js  ->  <opencode>\plugins\mcp-ida.js
-
+    ideamcp.ps1 ->  <opencode>\plugins\ideamcp.ps1
 Шаг 2. Создать каталог tool и скопировать tool-файл:
     mkdir <opencode>\tool
     tool\ida_mcp.js  ->  <opencode>\tool\ida_mcp.js
@@ -50,7 +51,7 @@ xrefs, py_eval, ...), закрывать инстансы — БЕЗ перез�
 Шаг 3. Скопировать Зависимости:
 package.json -> <opencode>\package.json
 
-Шаг 4. Путь к ida.exe внутри tool\ida_mcp.js (строка IDA_EXE):
+Шаг 4. Путь к ida.exe внутри tool\ida_mcp.js (строка IDA_EXE) && ideamcp.ps1:
     const IDA_EXE = process.env.IDA_EXE || 'X:\\<full path>\\ida.exe'
     Поменяй на свой путь ЛИБО задай переменную окружения IDA_EXE.
 
