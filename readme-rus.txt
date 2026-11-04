@@ -55,6 +55,8 @@ package.json -> <opencode>\package.json
     const IDA_EXE = process.env.IDA_EXE || 'X:\\<full path>\\ida.exe'
     Поменяй на свой путь ЛИБО задай переменную окружения IDA_EXE.
 
+ideamcp.ps1:
+'X:\<full path>\ida.exe'
 
 ================================================================================
 3. ПРОИЗВОЛЬНЫЕ ПОРТЫ БЕЗ ПЕРЕЗАПУСКА
