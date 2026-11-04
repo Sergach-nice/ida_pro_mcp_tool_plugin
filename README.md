@@ -77,7 +77,7 @@ const IDA_EXE = process.env.IDA_EXE || 'X:\\<full path>\\ida.exe'
 ```
 ps1:
 ```ps1
-$script:idaMcp:IdaExe = 'X:\\<full path>\\ida.exe'
+$script:idaMcp:IdaExe = 'X:\<full path>\ida.exe'
 ```
 
 
