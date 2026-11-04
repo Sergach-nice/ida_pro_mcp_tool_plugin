@@ -82,7 +82,7 @@ function removeInstanceFile(port) {
 
 // Run a PowerShell script via native args (correct quoting for paths with spaces).
 function runPs1(script) {
-  const ps1Path = path.join(os.homedir(), '.config', 'opencode', 'ideamcp.ps1')
+  const ps1Path = path.join(os.homedir(), '.config', 'opencode', 'plugins', 'ideamcp.ps1')
   const cmd = `. ${JSON.stringify(ps1Path)}; ${script}`
   return new Promise((resolve) => {
     const exe = process.platform === 'win32' ? 'powershell' : 'pwsh'
